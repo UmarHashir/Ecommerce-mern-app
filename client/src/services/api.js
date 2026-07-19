@@ -30,16 +30,16 @@ api.interceptors.response.use(
     }
 
     // Internal Server Error
-    if (error.response?.status >= 500) {
-      window.location.href = "/server-error";
-      return Promise.reject(error);
-    }
+    // if (error.response?.status >= 500) {
+    //   window.location.href = "/server-error";
+    //   return Promise.reject(error);
+    // }
 
     // Network Error (No Internet / Backend Down)
-    if (error.code === "ERR_NETWORK") {
-      window.location.href = "/server-error";
-      return Promise.reject(error);
-    }
+    // if (error.code === "ERR_NETWORK") {
+    //   window.location.href = "/server-error";
+    //   return Promise.reject(error);
+    // }
 
     return Promise.reject(error);
   }
