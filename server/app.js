@@ -30,7 +30,10 @@ app.use(cookieParser());
 app.use(helmet());
 app.use(
   cors({
-    origin: "https://ecommerce-mern-app-liard.vercel.app",
+    origin: [
+      "http://localhost:5173",
+      "https://ecommerce-mern-app-liard.vercel.app",
+    ],
     credentials: true,
   })
 );
